@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: lesson-scheduler
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/schedule
+    username: schedule
+    password: schedule
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
