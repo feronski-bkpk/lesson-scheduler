@@ -11,8 +11,8 @@ import org.springframework.data.repository.query.Param;
 public interface LessonRepository extends JpaRepository<Lesson, Long>, JpaSpecificationExecutor<Lesson> {
     @Query("""
             select l from Lesson l
-            where l.dayOfWeek = :DayOfWeek
-            and l.id<> :excludeId
+            where l.dayOfWeek = :dayOfWeek
+            and l.id <> :excludeId
             and l.startTime < :endTime
             and :startTime < l.endTime
             and (l.groupName = :groupName
